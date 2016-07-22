@@ -131,7 +131,6 @@
                     android:textSize="14sp"
                     android:textColor="@color/color_8290AF"
                     />
-
                 <View 
                     android:id="@+id/lin_dig"
                     android:layout_width="match_parent"

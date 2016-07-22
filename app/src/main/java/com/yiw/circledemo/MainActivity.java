@@ -91,7 +91,6 @@ public class MainActivity extends Activity implements ICircleView{
 		recyclerView.setLayoutManager(layoutManager);
 		recyclerView.addItemDecoration(new DivItemDecoration(2, true));
         recyclerView.getMoreProgressView().getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-
 		recyclerView.setOnTouchListener(new OnTouchListener() {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
@@ -304,8 +303,7 @@ public class MainActivity extends Activity implements ICircleView{
 		if(View.VISIBLE==visibility){
 			mEditText.requestFocus();
 			//弹出键盘
-			CommonUtils.showSoftInput(mEditText.getContext(), mEditText);
-
+			CommonUtils.showSoftInput(mEditText.getContext(), mEditText)
 		}else if(View.GONE==visibility){
 			//隐藏键盘
 			CommonUtils.hideSoftInput(mEditText.getContext(), mEditText);

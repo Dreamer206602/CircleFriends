@@ -1,7 +1,5 @@
 package com.yiw.circledemo.widgets;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +13,8 @@ import android.widget.TextView;
 import com.yiw.circledemo.R;
 import com.yiw.circledemo.bean.ActionItem;
 import com.yiw.circledemo.utils.DensityUtil;
+
+import java.util.ArrayList;
 
 /**
  * 朋友圈点赞评论的popupwindow
@@ -114,6 +114,6 @@ public class SnsPopupWindow extends PopupWindow implements OnClickListener{
 	 * 功能描述：弹窗子类项按钮监听事件
 	 */
 	public static interface OnItemClickListener {
-		public void onItemClick(ActionItem item, int position);
+		 void onItemClick(ActionItem item, int position);
 	}
 }

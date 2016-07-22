@@ -29,7 +29,6 @@ import com.yiw.circledemo.utils.DatasUtil;
 import com.yiw.circledemo.utils.GlideCircleTransform;
 import com.yiw.circledemo.utils.UrlUtils;
 import com.yiw.circledemo.widgets.CircleVideoView;
-import com.yiw.circledemo.widgets.CircularImage;
 import com.yiw.circledemo.widgets.CommentListView;
 import com.yiw.circledemo.widgets.FavortListView;
 import com.yiw.circledemo.widgets.MagicTextView;
@@ -74,7 +73,6 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
         if(position == 0){
             return TYPE_HEAD;
         }
-
         int itemType = 0;
         CircleItem item = (CircleItem) datas.get(position-1);
         if (CircleItem.TYPE_URL.equals(item.getType())) {
