@@ -85,7 +85,6 @@ public class MainActivity extends Activity implements ICircleView{
 	private void initView() {
 
         initTitle();
-
 		recyclerView = (SuperRecyclerView) findViewById(R.id.recyclerView);
 		layoutManager = new LinearLayoutManager(this);
 		recyclerView.setLayoutManager(layoutManager);
@@ -131,8 +130,6 @@ public class MainActivity extends Activity implements ICircleView{
 
 			}
 		});
-
-
 		mAdapter = new CircleAdapter(this);
 		mAdapter.setCirclePresenter(mPresenter);
         recyclerView.setAdapter(mAdapter);
@@ -197,7 +194,6 @@ public class MainActivity extends Activity implements ICircleView{
                 if(keyboardH == mCurrentKeyboardH){//有变化时才处理，否则会陷入死循环
                 	return;
                 }
-
 				mCurrentKeyboardH = keyboardH;
             	mScreenHeight = screenH;//应用屏幕的高度
             	mEditTextBodyHeight = mEditTextBody.getHeight();
@@ -297,13 +293,11 @@ public class MainActivity extends Activity implements ICircleView{
 	public void updateEditTextBodyVisible(int visibility, CommentConfig commentConfig) {
 		mCommentConfig = commentConfig;
 		mEditTextBody.setVisibility(visibility);
-
 		measureCircleItemHighAndCommentItemOffset(commentConfig);
-
 		if(View.VISIBLE==visibility){
 			mEditText.requestFocus();
 			//弹出键盘
-			CommonUtils.showSoftInput(mEditText.getContext(), mEditText)
+			CommonUtils.showSoftInput(mEditText.getContext(), mEditText);
 		}else if(View.GONE==visibility){
 			//隐藏键盘
 			CommonUtils.hideSoftInput(mEditText.getContext(), mEditText);

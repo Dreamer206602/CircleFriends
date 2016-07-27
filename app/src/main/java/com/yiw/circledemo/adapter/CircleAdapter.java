@@ -105,7 +105,6 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
         if(getItemViewType(position)==TYPE_HEAD){
             HeaderViewHolder holder = (HeaderViewHolder) viewHolder;
         }else{
-
             final int circlePosition = position - HEADVIEW_SIZE;
             final CircleViewHolder holder = (CircleViewHolder) viewHolder;
             CircleItem circleItem = (CircleItem) datas.get(circlePosition);
@@ -119,7 +118,9 @@ public class CircleAdapter extends BaseRecycleViewAdapter {
             boolean hasFavort = circleItem.hasFavort();
             boolean hasComment = circleItem.hasComment();
 
-            Glide.with(context).load(headImg).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.color.bg_no_photo).transform(new GlideCircleTransform(context)).into(holder.headIv);
+            Glide.with(context).load(headImg).diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .placeholder(R.color.bg_no_photo)
+                    .transform(new GlideCircleTransform(context)).into(holder.headIv);
 
             holder.nameTv.setText(name);
             holder.timeTv.setText(createTime);

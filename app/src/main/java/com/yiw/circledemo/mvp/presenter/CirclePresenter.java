@@ -29,7 +29,6 @@ public class CirclePresenter extends BasePresenter<ICircleView>{
 	}
 
 	public void loadData(int loadType){
-
         List<CircleItem> datas = DatasUtil.createCircleDatas();
         getView().update2loadData(loadType, datas);
 	}
@@ -45,7 +44,6 @@ public class CirclePresenter extends BasePresenter<ICircleView>{
 	 */
 	public void deleteCircle(final String circleId){
 		mCircleModel.deleteCircle(new IDataRequestListener() {
-
 			@Override
 			public void loadSuccess(Object object) {
 				getView().update2DeleteCircle(circleId);
