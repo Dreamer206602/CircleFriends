@@ -102,7 +102,8 @@ public class ImagePagerActivity extends Activity{
                 View view = new View(this);
                 view.setBackgroundResource(R.drawable.selector_guide_bg);
                 view.setSelected(i==startPos ? true : false);
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(getResources().getDimensionPixelSize(R.dimen.gudieview_width),
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                        getResources().getDimensionPixelSize(R.dimen.gudieview_width),
                         getResources().getDimensionPixelSize(R.dimen.gudieview_heigh));
                 layoutParams.setMargins(10, 0, 0, 0);
                 guideGroup.addView(view, layoutParams);
